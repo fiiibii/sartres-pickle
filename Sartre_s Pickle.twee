@@ -1,0 +1,68 @@
+:: StoryTitle
+Sartre's Pickle
+
+
+:: StoryData
+{
+  "ifid": "95A8DC35-124F-4611-B7B5-288A83D91AF4",
+  "format": "Harlowe",
+  "format-version": "3.3.5",
+  "start": "Intro",
+  "zoom": 1
+}
+
+
+:: Continue. {"position":"650,475","size":"100,100"}
+
+
+
+:: Intro {"position":"650,175","size":"100,100"}
+(append: ?SideBar)[\
+hihi
+]
+
+This is Jack. No matter the choices you make, he will die at the end of this story.
+
+Do you wish to proceed?
+
+[[Yes.|Intro yes]] [[No.|Intro no]]
+
+
+:: Intro no {"position":"750,325","size":"100,100"}
+//No.//
+
+I am sorry, but you never had the choice in the first place.
+
+[[Continue.]]
+
+
+:: Intro yes {"position":"550,325","size":"100,100"}
+(append: ?SideBar)[\
+test
+]
+
+//Yes.//
+
+As you wish.
+
+[[Continue.]]
+
+
+:: StoryStylesheet [stylesheet]
+tw-story {
+  background-color: black;
+  color: lightgrey;
+  font-family: Courier New;
+  font-size: 125%;
+}
+tw-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%; /* padding-right of the tw-story element. */
+  max-height: 100%;
+  margin-top: 0%; /* padding-top of the tw-story element. */
+  padding: 0 0.5em 0.5em 0.5em;
+  text-align: left, top;
+  background-color: transparent;
+}
